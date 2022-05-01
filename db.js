@@ -1,7 +1,8 @@
 const {MongoClient} = require('mongodb');
+require('dotenv').config()
 
 let dbConnection
-const uri = "mongodb+srv://venu:nm78th2019@cluster0.mzcnu.mongodb.net/bookstore?retryWrites=true&w=majority"
+const uri = process.env.URI;
 //cb callBack functin
 const connectToDb = (cb) => {
 
